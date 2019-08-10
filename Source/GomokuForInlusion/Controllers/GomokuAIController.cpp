@@ -14,10 +14,13 @@ AGomokuAIController::AGomokuAIController()
 void AGomokuAIController::OnReceiveControls_Implementation() 
 {
 	auto Board = GetGomokuPawn()->Board;
-	auto Moves = GetSmartMoves(3, Board->CurrentPlayer);
+	if (Board) 
+	{
+		auto Moves = GetSmartMoves(3, Board->CurrentPlayer);
 
-	//auto Moves = GetDummyMoves();
-	ApplyRandomMove(Moves);
+		//auto Moves = GetDummyMoves();
+		ApplyRandomMove(Moves);
+	}
 	bMoveStart = false;
 }
 

@@ -1,4 +1,3 @@
-<pre>
 # GomokuForInlusion
 Five in a row
 
@@ -14,10 +13,10 @@ Project Architecture
 	GomokuMove - its an UObject that represent player move that applies to GomokuBoard. It can be extended in C++/Blueprints for adding new features like "black magic swap"
 	
 Additional Comments
-    Instanced static meshes are used instead of bunch of single static meshes to boost the performance.
+	Instanced static meshes are used instead of bunch of single static meshes to boost the performance.
 	
 UI/Keyboard/Mouse
 	Mouse scroll to Zoom camera
 	Hold right mouse button to rotate camera
 	Left button - to put token
-</pre>
+	
