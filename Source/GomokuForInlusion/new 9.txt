@@ -1,0 +1,37 @@
+Project Architecture
+	I use Unreal Engine 4 standart class hierarchy and classes workflow. Because it will be flexible for future project extends. For example network support implementation, new moves etc.
+	
+	UGomokuControllerInterface 
+		GomokuPlayerController - Player controller
+		GomokuAIController - Implements gomoku AI strategy logic. Can be extended from C++ or Blueprints for custom implementations. Override OnReceiveControls.
+		
+	GomokuPawn - APawn Extendeble in blueprints. Controls visual representation of player moves
+	GomokuBoard - Main AActor that implements all board mechanics
+	GomokuMove - its an UObject that represent player move that applies to GomokuBoard. It can be extend in C++/Blueprints for game functionality extension. e.g. new moves like "black magic swap"
+	
+Additional Comments
+	Used Instanced static meshes instead of bunch of single Static mesh because of huge performance increasing with this approach. 
+	
+UI/Keyboard/Mouse
+	mouse scroll or UI +/- to Zoom camera
+	Hold mouse button to rotate camera
+	Left button - to put token
+	
+
+
+
+AI
+Dangerouse situations
+Save/LoadGames
+
+
+UI
+Визуальное оформление трех уровней
+Менюшки 
+Еффекты
+
+win music
+lose music
+Ход черной магии
+
+Новые ходы в блюпринтах
